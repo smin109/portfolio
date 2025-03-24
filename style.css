@@ -13,33 +13,36 @@ body {
 }
 
 .navigation {
-  position: relative;
-  width: 450px;
-  height: 80px;
-  background: #2f2f2f;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1;
-  grid-row: 2 / 3;
-}
-
+    position: fixed;
+    bottom: 0;
+    width: 250px; /* 네비게이션 바의 너비를 아이콘 수에 맞게 조정 */
+    height: 80px;
+    background: #2f2f2f;
+    display: flex;
+    justify-content: space-between; /* 아이콘들이 일정 간격을 두고 배치되도록 */
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+    grid-row: 2 / 3;
+    padding: 0 20px; /* 여백을 추가해 아이콘들이 네비게이션 바 안에서 균등하게 배치되도록 */
+  }
+  
 ul {
-  position: relative;
-  display: flex;
-  width: 400px;
-  margin: 0;
-  padding: 0;
-  z-index: 1000;
+    position: relative;
+    display: flex;
+    width: 100%; /* 네비게이션 바의 너비에 맞춰 */
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    justify-content: space-between; /* 아이콘들 사이에 일정한 간격을 추가 */
 }
 
 li {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  list-style: none;
-  z-index: 1;
+    position: relative;
+    width: 60px; /* 각 아이콘의 너비를 줄여서 네비게이션 바에 맞게 조정 */
+    height: 60px; /* 아이콘의 높이도 동일하게 조정 */
+    list-style: none;
+    z-index: 1;
 }
 
 a {

@@ -1,11 +1,11 @@
 const items = document.querySelectorAll('.list');
 const contentTitle = document.getElementById("content-title");
 const contentText = document.getElementById("content-text");
-const contentImage = document.getElementById("content-image");
+const contentImage = document.getElementById("content-img");
 const contentDescription = document.getElementById("content-description");
 const contentLink = document.getElementById("content-link");
 
-// 각 메뉴에 대한 콘텐츠 데이터 (5개의 항목)
+// 각 메뉴에 대한 콘텐츠 데이터 (Photos와 Settings 항목 제거)
 const contentData = [
     {
         title: "Home",
@@ -27,20 +27,6 @@ const contentData = [
         img: "images/messages.jpg",
         description: "Check your incoming messages from here.",
         link: "https://www.messages.com"
-    },
-    {
-        title: "Photos",
-        text: "Check out your photos.",
-        img: "images/photos.jpg",
-        description: "View and manage your photo gallery here.",
-        link: "https://www.photos.com"
-    },
-    {
-        title: "Settings",
-        text: "Adjust your preferences here.",
-        img: "images/settings.jpg",
-        description: "Change your account and website settings.",
-        link: "https://www.settings.com"
     }
 ];
 
