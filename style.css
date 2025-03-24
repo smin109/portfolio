@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   background: #222327;
   color: white;
+  grid-template-rows: 1fr 80px;
 }
 
 .navigation {
@@ -21,6 +22,7 @@ body {
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   z-index: 1;
+  grid-row: 2 / 3;
 }
 
 ul {
@@ -138,6 +140,24 @@ li.active .text {
   50% {
     transform: rotate(55deg);
   }
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    color: #222;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    grid-row: 1 / 2;
+}
+
+h2, p { 
+    margin: 0;
 }
 
 .indicator {
