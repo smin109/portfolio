@@ -147,6 +147,8 @@ li.active .text {
     margin-top: 20px;
     padding: 20px;
     background: #fff;
+    height: 400px;
+    overflow-y: auto;
     color: #222;
     border-radius: 10px;
     width: 80%;
@@ -154,6 +156,7 @@ li.active .text {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
     grid-row: 1 / 2;
+    transition: height 0.3s ease-in-out;
 }
 
 h2, p { 

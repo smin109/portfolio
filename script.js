@@ -1,31 +1,67 @@
 const items = document.querySelectorAll('.list');
 const contentTitle = document.getElementById("content-title");
 const contentText = document.getElementById("content-text");
+const contentImage = document.getElementById("content-image");
+const contentDescription = document.getElementById("content-description");
+const contentLink = document.getElementById("content-link");
 
-// 각 메뉴에 대한 콘텐츠 데이터
+// 각 메뉴에 대한 콘텐츠 데이터 (5개의 항목)
 const contentData = [
-    { title: "Home", text: "Welcome to the homepage!" },
-    { title: "Profile", text: "This is your profile page." },
-    { title: "Messages", text: "Here are your messages." },
-    { title: "Photos", text: "Check out your photos." },
-    { title: "Settings", text: "Adjust your preferences here." }
+    {
+        title: "Home",
+        text: "Welcome to the homepage!",
+        img: "images/home.jpg",
+        description: "This is the main page where you can find the latest updates.",
+        link: "https://www.homepage.com"
+    },
+    {
+        title: "Profile",
+        text: "This is your profile page.",
+        img: "images/profile.jpg",
+        description: "This is where your personal information and settings are displayed.",
+        link: "https://www.profilepage.com"
+    },
+    {
+        title: "Messages",
+        text: "Here are your messages.",
+        img: "images/messages.jpg",
+        description: "Check your incoming messages from here.",
+        link: "https://www.messages.com"
+    },
+    {
+        title: "Photos",
+        text: "Check out your photos.",
+        img: "images/photos.jpg",
+        description: "View and manage your photo gallery here.",
+        link: "https://www.photos.com"
+    },
+    {
+        title: "Settings",
+        text: "Adjust your preferences here.",
+        img: "images/settings.jpg",
+        description: "Change your account and website settings.",
+        link: "https://www.settings.com"
+    }
 ];
 
 function activeLink() {
-    // 모든 리스트에서 active 제거
+    // 모든 리스트에서 active 클래스 제거
     items.forEach((item) => {
         item.classList.remove('active');
     });
 
-    // 현재 클릭한 리스트에 active 추가
+    // 현재 클릭한 리스트에 active 클래스 추가
     this.classList.add('active');
 
-    // 현재 클릭한 리스트의 인덱스 찾기
+    // 현재 클릭한 리스트의 인덱스를 찾음
     const index = Array.from(items).indexOf(this);
 
-    // 콘텐츠 변경
+    // 콘텐츠 데이터에서 해당 인덱스의 정보로 콘텐츠 업데이트
     contentTitle.textContent = contentData[index].title;
     contentText.textContent = contentData[index].text;
+    contentImage.src = contentData[index].img;
+    contentDescription.textContent = contentData[index].description;
+    contentLink.href = contentData[index].link;
 }
 
 // 각 리스트 항목에 클릭 이벤트 추가
