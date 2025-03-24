@@ -93,58 +93,6 @@ li.active .text {
   opacity: 1;
 }
 
-.indicator {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.5s;
-  z-index: -1;
-}
-
-.indicator::before {
-  content: '';
-  position: absolute;
-  width: 80%;
-  height: 16px;
-  background: #29fd53;
-  bottom: 14px;
-  border-radius: 10px;
-}
-
-.indicator::after {
-  content: "";
-  width: 7.5px;
-  height: 7.5px;
-  position: absolute;
-  top: -3px;
-  border-radius: 50%;
-  background: #333;
-  box-shadow:
-    0 0 0 2px #29fd53,
-    50px 50px #29fd53,
-    40px 0 #29fd53,
-    0 40px #29fd53;
-  transform: rotate(45deg);
-  animation: animate 2s ease-in-out infinite;
-}
-
-@keyframes animate {
-
-  0%,
-  100% {
-    transform: rotate(35deg);
-  }
-
-  50% {
-    transform: rotate(55deg);
-  }
-}
-
 .content {
     text-align: center;
     margin-top: 20px;
@@ -164,27 +112,4 @@ li.active .text {
 
 h2, p { 
     margin: 0;
-}
-
-.indicator {
-  --pos-1: translateX(calc(80px * 1));
-  --pos-2: translateX(calc(80px * 2));
-  --pos-3: translateX(calc(80px * 3));
-  --pos-4: translateX(calc(80px * 4));
-}
-
-li:nth-child(2).active~.indicator {
-  transform: var(--pos-1);
-}
-
-li:nth-child(3).active~.indicator {
-  transform: var(--pos-2);
-}
-
-li:nth-child(4).active~.indicator {
-  transform: var(--pos-3);
-}
-
-li:nth-child(5).active~.indicator {
-  transform: var(--pos-4);
 }
